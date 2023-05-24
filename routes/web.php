@@ -23,6 +23,12 @@ Route::get('/dashboard', function () {
 Route::get('/addBalance', function () {
     return view('addbalance');
 })->middleware(['auth'])->name('dashboard');
+Route::post('/obrabotka', function () {
+    return view('obrabotka');
+})->middleware(['auth'])->name('dashboard');
+Route::post('/obrabotkaRes', function () {
+    return view('obrabotkaRes');
+})->middleware(['auth'])->name('dashboard');
 Route::get('auth/google', [\App\Http\Controllers\googleauthcontroller::class,'redirect'])->name('google-auth');
 Route::get('auth/google/call-back', [\App\Http\Controllers\googleauthcontroller::class, 'callbackGoogle']);
 require __DIR__.'/auth.php';

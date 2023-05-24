@@ -3,6 +3,7 @@
         <h2>Текущий баланс: {{auth()->user()->balance}} руб.</h2>
         <br><br>
         <h2>Пополнение баланса</h2>
+        <p>Обработка транзакции до 3-х рабочих дней.</p>
         <div class="input-group mb-3">
             <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
                 @csrf
